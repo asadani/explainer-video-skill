@@ -2,6 +2,17 @@
 
 Animated explainer videos, GIFs, arrow-flow images and PDF carousels from a JSON scene spec. Works as a Claude skill and as a standalone CLI.
 
+<p align="center">
+  <img src="docs/demo-sketch-dark.gif" alt="Dark hand-drawn explainer, LinkedIn 4:5" height="440">
+  &nbsp;
+  <img src="docs/demo-flow-warm.gif" alt="Warm clean arrow-flow loop" height="440">
+</p>
+<p align="center">
+  <img src="docs/demo-landscape.gif" alt="Landscape 16:9 with burned-in captions" width="720">
+</p>
+
+<p align="center"><sub>Rendered by this repo from <code>examples/</code>: dark sketch (LinkedIn 4:5), warm arrow-flow loop, and a captioned landscape video. Same specs, different <code>--canvas</code>, <code>--style</code> and <code>--theme</code>.</sub></p>
+
 Describe a topic, get animated diagrams (boxes, arrows, loops, token grids, step tabs) as a narrated video, a captioned video, or a silent one that carries its message in on-screen text. Just Python, Pillow, numpy and ffmpeg: no browser, no GPU.
 
 ```
@@ -48,7 +59,7 @@ Personalise: set `video.author` (name, handle, `avatar` image path) and `video.w
 
 ## Use it as a Claude skill
 
-Copy this folder into your skills directory (for Claude Code: `.claude/skills/explainer-video/`) or zip it and add it in Claude settings. Then ask, for example: "make a 45 second dark sketch explainer about how MCP works for LinkedIn, no audio". `SKILL.md` tells Claude to pick the output, storyboard, write and validate the spec, look at stills, and render.
+Copy this folder into your skills directory under the name `explainer-video` (for Claude Code: `.claude/skills/explainer-video/`) or zip it and add it in Claude settings. Then ask, for example: "make a 45 second dark sketch explainer about how MCP works for LinkedIn, no audio". `SKILL.md` tells Claude to pick the output, storyboard, write and validate the spec, look at stills, and render.
 
 ## Layout
 
@@ -56,6 +67,7 @@ Copy this folder into your skills directory (for Claude Code: `.claude/skills/ex
 |---|---|
 | `scripts/evideo.py` | renderer and CLI |
 | `references/spec.md` | every spec field |
+| `docs/` | the demo GIFs shown above |
 | `examples/` | three working specs (sketch story, flow GIF, narrated landscape) |
 | `recipes/tts.md` | voice engines |
 | `tests/smoke.py` | validates every example across canvases, styles and themes; renders stills, GIF, PNG, PDF |
