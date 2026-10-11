@@ -1,0 +1,74 @@
+{
+  "video": {
+    "canvas": "story",
+    "style": "sketch",
+    "theme": "dark",
+    "audio": "none",
+    "author": {"name": "Your Name", "handle": "@yourhandle"},
+    "watermark": {"text": "yoursite.dev", "opacity": 0.28, "position": "bottom-right"}
+  },
+  "scenes": [
+    {
+      "id": "problem",
+      "heading": "the problem",
+      "duration": 7,
+      "elements": [
+        {"type": "text", "x": "50%", "y": "22%", "text": "N apps", "size": 54, "bold": true, "color": "cyan", "align": "center", "at": 0.05},
+        {"type": "text", "x": "50%", "y": "30%", "text": "×", "size": 44, "color": "muted", "align": "center", "at": 0.22},
+        {"type": "text", "x": "50%", "y": "36%", "text": "M tools", "size": 54, "bold": true, "color": "coral", "align": "center", "at": 0.32},
+        {"type": "text", "x": "50%", "y": "47%", "text": "= N × M integrations", "size": 40, "color": "yellow", "align": "center", "at": 0.58},
+        {"type": "text", "x": "50%", "y": "55%", "text": "every pair needs its own glue code", "size": 26, "color": "muted", "align": "center", "at": 0.78}
+      ]
+    },
+    {
+      "id": "enter-mcp",
+      "heading": "enter MCP",
+      "duration": 8,
+      "elements": [
+        {"type": "flow", "nodes": [
+          {"title": "AI app", "sub": "the MCP client", "style": "cyan", "arrow_label": "one protocol"},
+          {"title": "MCP server", "sub": "wraps one tool or data source", "style": "coral", "hl": [0.55, 0.85], "arrow_label": "calls"},
+          {"title": "your tool or data", "sub": "GitHub, a database, files", "style": "yellow"}
+        ]},
+        {"type": "text", "x": "50%", "y": "88%", "text": "same server, any client", "size": 28, "color": "muted", "align": "center", "at": 0.88}
+      ]
+    },
+    {
+      "id": "offers",
+      "heading": "what a server offers",
+      "duration": 8,
+      "elements": [
+        {"type": "flow", "arrows": false, "nodes": [
+          {"title": "Tools", "sub": "functions the model can call", "style": "cyan"},
+          {"title": "Resources", "sub": "data the model can read", "style": "coral"},
+          {"title": "Prompts", "sub": "reusable templates", "style": "yellow", "dashed": true}
+        ]}
+      ]
+    },
+    {
+      "id": "one-request",
+      "heading": "one request, step by step",
+      "duration": 10,
+      "elements": [
+        {"type": "flow", "loop": true, "loop_label": "repeat until done", "nodes": [
+          {"title": "1  discover", "sub": "client lists the server's tools", "style": "cyan"},
+          {"title": "2  decide", "sub": "model picks a tool and arguments", "style": "yellow"},
+          {"title": "3  run", "sub": "server executes it", "style": "coral"},
+          {"title": "4  return", "sub": "result goes back to the model", "style": "green"}
+        ]}
+      ]
+    },
+    {
+      "id": "takeaway",
+      "heading": "takeaway",
+      "duration": 8,
+      "elements": [
+        {"type": "text", "x": "50%", "y": "28%", "text": "N × M", "size": 64, "bold": true, "color": "coral", "align": "center", "at": 0.05, "mark": {"kind": "strike", "at": 0.45, "color": "coral"}},
+        {"type": "text", "x": "50%", "y": "38%", "text": "becomes", "size": 26, "color": "muted", "align": "center", "at": 0.4},
+        {"type": "text", "x": "50%", "y": "44%", "text": "N + M", "size": 72, "bold": true, "color": "yellow", "align": "center", "at": 0.55},
+        {"type": "text", "x": "50%", "y": "58%", "text": "write the tool once,", "size": 30, "color": "ink", "align": "center", "at": 0.75},
+        {"type": "text", "x": "50%", "y": "62%", "text": "every client can use it", "size": 30, "color": "cyan", "align": "center", "at": 0.82}
+      ]
+    }
+  ]
+}

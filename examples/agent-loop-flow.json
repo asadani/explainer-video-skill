@@ -1,0 +1,27 @@
+{
+  "video": {
+    "canvas": "linkedin",
+    "style": "clean",
+    "theme": "warm",
+    "audio": "none",
+    "author": {"name": "Your Name", "handle": "@yourhandle", "position": "bottom-left"},
+    "watermark": {"text": "yoursite.dev", "opacity": 0.3}
+  },
+  "scenes": [
+    {
+      "id": "agent-loop",
+      "heading": "How an AI agent works",
+      "sub": "A loop, not a single answer.",
+      "tag": "Agents 101",
+      "duration": 9,
+      "elements": [
+        {"type": "flow", "loop": true, "loop_label": "repeat until the goal is met", "nodes": [
+          {"title": "Goal", "sub": "what the user asked for", "style": "accent"},
+          {"title": "Plan", "sub": "pick the next step", "style": "default"},
+          {"title": "Act", "sub": "call a tool or write code", "style": "default"},
+          {"title": "Observe", "sub": "read the result, update the plan", "style": "default", "hl": [0.7, 0.95]}
+        ]}
+      ]
+    }
+  ]
+}

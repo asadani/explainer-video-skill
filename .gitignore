@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+audio/
+narration/
+out/
+*.mp4
+*.wav
+still*.png
+audio-*/
+narration-*/
+*.gif
+*.srt

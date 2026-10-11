@@ -1,0 +1,517 @@
+{
+  "responsive": false,
+  "video": {
+    "canvas": "landscape",
+    "kicker": "RAG in four steps",
+    "author": "example video",
+    "footer_right": "explainer-video-skill",
+    "lead": 0.5,
+    "tail": 0.9
+  },
+  "scenes": [
+    {
+      "id": "scene-01",
+      "step": "Step 01",
+      "tag": "01 / Chunk + embed",
+      "heading": "Step 1: chunk and embed.",
+      "sub": "Turn documents into searchable vectors.",
+      "narration": "First, we prepare the knowledge. Documents are split into small, overlapping chunks, so each piece holds one idea. An embedding model then turns every chunk into a vector, a list of numbers that captures its meaning. How you chunk decides what retrieval can ever find.",
+      "elements": [
+        {
+          "type": "box",
+          "x": 70,
+          "y": 380,
+          "w": 250,
+          "h": 140,
+          "title": "Documents",
+          "sub": "PDFs, wikis, tickets",
+          "at": 0.02
+        },
+        {
+          "type": "arrow",
+          "points": [
+            [
+              330,
+              450
+            ],
+            [
+              420,
+              450
+            ]
+          ],
+          "at": 0.12
+        },
+        {
+          "type": "box",
+          "x": 430,
+          "y": 380,
+          "w": 250,
+          "h": 140,
+          "title": "Chunker",
+          "sub": "Small, overlapping pieces",
+          "at": 0.14
+        },
+        {
+          "type": "arrow",
+          "points": [
+            [
+              690,
+              450
+            ],
+            [
+              770,
+              450
+            ]
+          ],
+          "at": 0.3
+        },
+        {
+          "type": "grid",
+          "x": 780,
+          "y": 405,
+          "cols": 5,
+          "rows": 3,
+          "cell": 26,
+          "gap": 6,
+          "label": "chunks",
+          "seed": 3,
+          "at": 0.32
+        },
+        {
+          "type": "arrow",
+          "points": [
+            [
+              955,
+              450
+            ],
+            [
+              1035,
+              450
+            ]
+          ],
+          "at": 0.5
+        },
+        {
+          "type": "box",
+          "x": 1040,
+          "y": 380,
+          "w": 240,
+          "h": 140,
+          "title": "Embedding model",
+          "sub": "Chunk in, vector out",
+          "style": "accent",
+          "hl": [
+            0.5,
+            0.75
+          ],
+          "at": 0.52
+        },
+        {
+          "type": "arrow",
+          "points": [
+            [
+              1290,
+              450
+            ],
+            [
+              1370,
+              450
+            ]
+          ],
+          "at": 0.72
+        },
+        {
+          "type": "grid",
+          "x": 1380,
+          "y": 392,
+          "cols": 4,
+          "rows": 6,
+          "cell": 16,
+          "gap": 4,
+          "label": "vectors",
+          "seed": 5,
+          "at": 0.74
+        },
+        {
+          "type": "text",
+          "x": 800,
+          "y": 640,
+          "text": "Chunking decides what retrieval can ever find.",
+          "size": 28,
+          "bold": true,
+          "color": "accent",
+          "align": "center",
+          "at": 0.88
+        }
+      ]
+    },
+    {
+      "id": "scene-02",
+      "step": "Step 02",
+      "tag": "02 / Index",
+      "heading": "Step 2: store in an index.",
+      "sub": "Make similarity search fast.",
+      "narration": "Next, those vectors are stored in an index built for similarity search. It uses approximate nearest neighbour algorithms, so lookups take milliseconds even across millions of chunks. We keep metadata beside each vector, like the source and page, so results can be filtered and cited.",
+      "elements": [
+        {
+          "type": "grid",
+          "x": 90,
+          "y": 360,
+          "cols": 4,
+          "rows": 6,
+          "cell": 16,
+          "gap": 4,
+          "label": "chunk vectors",
+          "seed": 5,
+          "at": 0.02
+        },
+        {
+          "type": "arrow",
+          "points": [
+            [
+              190,
+              420
+            ],
+            [
+              330,
+              420
+            ]
+          ],
+          "at": 0.15
+        },
+        {
+          "type": "box",
+          "x": 340,
+          "y": 330,
+          "w": 380,
+          "h": 180,
+          "title": "Vector index",
+          "sub": "Approximate nearest-neighbour search (HNSW or IVF)",
+          "style": "accent",
+          "hl": [
+            0.3,
+            0.55
+          ],
+          "at": 0.18
+        },
+        {
+          "type": "arrow",
+          "points": [
+            [
+              530,
+              570
+            ],
+            [
+              530,
+              520
+            ]
+          ],
+          "at": 0.62
+        },
+        {
+          "type": "box",
+          "x": 340,
+          "y": 570,
+          "w": 380,
+          "h": 100,
+          "title": "Metadata",
+          "sub": "Source, page, access rights",
+          "style": "muted",
+          "at": 0.6
+        },
+        {
+          "type": "arrow",
+          "points": [
+            [
+              730,
+              420
+            ],
+            [
+              830,
+              420
+            ]
+          ],
+          "at": 0.35
+        },
+        {
+          "type": "box",
+          "x": 840,
+          "y": 350,
+          "w": 340,
+          "h": 140,
+          "title": "Milliseconds",
+          "sub": "Search millions of chunks by meaning",
+          "at": 0.38
+        },
+        {
+          "type": "text",
+          "x": 800,
+          "y": 705,
+          "text": "Keep metadata beside each vector, so you can filter and cite.",
+          "size": 26,
+          "bold": true,
+          "color": "accent",
+          "align": "center",
+          "at": 0.85
+        }
+      ]
+    },
+    {
+      "id": "scene-03",
+      "step": "Step 03",
+      "tag": "03 / Retrieve",
+      "heading": "Step 3: retrieve the closest chunks.",
+      "sub": "Match the question to meaning, not keywords.",
+      "narration": "When a question arrives, the same embedding model turns it into a query vector. The index finds the stored vectors closest to it, and returns the top matching chunks. Similar meaning means nearby vectors, even when the words are different.",
+      "elements": [
+        {
+          "type": "box",
+          "x": 70,
+          "y": 380,
+          "w": 250,
+          "h": 140,
+          "title": "User question",
+          "sub": "How do I reset my password?",
+          "at": 0.02
+        },
+        {
+          "type": "arrow",
+          "points": [
+            [
+              330,
+              450
+            ],
+            [
+              420,
+              450
+            ]
+          ],
+          "at": 0.12
+        },
+        {
+          "type": "box",
+          "x": 430,
+          "y": 380,
+          "w": 230,
+          "h": 140,
+          "title": "Same embedding model",
+          "sub": "Question becomes a vector",
+          "style": "accent",
+          "hl": [
+            0.15,
+            0.35
+          ],
+          "at": 0.14
+        },
+        {
+          "type": "arrow",
+          "points": [
+            [
+              670,
+              450
+            ],
+            [
+              740,
+              450
+            ]
+          ],
+          "at": 0.32
+        },
+        {
+          "type": "grid",
+          "x": 750,
+          "y": 392,
+          "cols": 4,
+          "rows": 6,
+          "cell": 16,
+          "gap": 4,
+          "label": "query vector",
+          "seed": 9,
+          "at": 0.34
+        },
+        {
+          "type": "arrow",
+          "points": [
+            [
+              850,
+              450
+            ],
+            [
+              930,
+              450
+            ]
+          ],
+          "label": "nearest",
+          "at": 0.5
+        },
+        {
+          "type": "box",
+          "x": 940,
+          "y": 380,
+          "w": 240,
+          "h": 140,
+          "title": "Vector index",
+          "sub": "Finds the closest chunks",
+          "style": "accent",
+          "hl": [
+            0.5,
+            0.7
+          ],
+          "at": 0.52
+        },
+        {
+          "type": "arrow",
+          "points": [
+            [
+              1190,
+              450
+            ],
+            [
+              1270,
+              450
+            ]
+          ],
+          "at": 0.68
+        },
+        {
+          "type": "grid",
+          "x": 1280,
+          "y": 378,
+          "cols": 3,
+          "rows": 4,
+          "cell": 30,
+          "gap": 8,
+          "label": "top matches",
+          "seed": 2,
+          "lit": [
+            0.7,
+            0.95
+          ],
+          "at": 0.68
+        },
+        {
+          "type": "text",
+          "x": 800,
+          "y": 640,
+          "text": "Similar meaning means nearby vectors.",
+          "size": 28,
+          "bold": true,
+          "color": "accent",
+          "align": "center",
+          "at": 0.88
+        }
+      ]
+    },
+    {
+      "id": "scene-04",
+      "step": "Step 04",
+      "tag": "04 / Generate",
+      "heading": "Step 4: generate a grounded answer.",
+      "sub": "Let the model answer from the evidence.",
+      "narration": "Finally, the top chunks are placed into a prompt together with the question. The language model answers using only that context, and points back to its sources. Cited answers are easier to trust, and far easier to debug.",
+      "elements": [
+        {
+          "type": "grid",
+          "x": 80,
+          "y": 395,
+          "cols": 3,
+          "rows": 4,
+          "cell": 30,
+          "gap": 8,
+          "label": "top matches",
+          "seed": 2,
+          "at": 0.02
+        },
+        {
+          "type": "arrow",
+          "points": [
+            [
+              205,
+              450
+            ],
+            [
+              290,
+              450
+            ]
+          ],
+          "at": 0.12
+        },
+        {
+          "type": "box",
+          "x": 300,
+          "y": 340,
+          "w": 300,
+          "h": 220,
+          "title": "Prompt",
+          "sub": "Rules, the question and the retrieved chunks",
+          "at": 0.14
+        },
+        {
+          "type": "arrow",
+          "points": [
+            [
+              610,
+              450
+            ],
+            [
+              690,
+              450
+            ]
+          ],
+          "at": 0.34
+        },
+        {
+          "type": "box",
+          "x": 700,
+          "y": 380,
+          "w": 260,
+          "h": 140,
+          "title": "Language model",
+          "sub": "Answers only from the context",
+          "style": "accent",
+          "hl": [
+            0.4,
+            0.7
+          ],
+          "at": 0.36
+        },
+        {
+          "type": "arrow",
+          "points": [
+            [
+              970,
+              450
+            ],
+            [
+              1050,
+              450
+            ]
+          ],
+          "at": 0.62
+        },
+        {
+          "type": "box",
+          "x": 1060,
+          "y": 340,
+          "w": 460,
+          "h": 220,
+          "title": "Grounded answer",
+          "sub": "With citations back to the source chunks",
+          "style": "accent",
+          "at": 0.64
+        },
+        {
+          "type": "text",
+          "x": 800,
+          "y": 640,
+          "text": "Cited answers are easier to trust, and to debug.",
+          "size": 28,
+          "bold": true,
+          "color": "accent",
+          "align": "center",
+          "at": 0.88
+        }
+      ]
+    }
+  ]
+}
