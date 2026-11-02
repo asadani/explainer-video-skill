@@ -50,7 +50,7 @@ With a voice:
 
 ```bash
 python scripts/evideo.py render examples/rag-pipeline.json --audio generate \
-    --tts narrate-your-writing --narrate-path ../narrate-your-writing/narrate.py --out out/rag.mp4
+    --tts narrate-your-writing --narrate-path ../../tools/narrate-your-writing/narrate.py --out out/rag.mp4
 ```
 
 Or do it by steps: `narration` writes the text files, `audio` makes the clips, `render --audio files` assembles. See [`recipes/tts.md`](recipes/tts.md).

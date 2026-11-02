@@ -861,6 +861,7 @@ def write_narration(spec, out_dir):
 
 def find_narrate(hint, spec_dir):
     cands = [hint, os.environ.get("EVIDEO_NARRATE"), HERE.parent.parent / "narrate-your-writing" / "narrate.py",
+             HERE.parent.parent.parent / "tools" / "narrate-your-writing" / "narrate.py",
              Path(spec_dir) / "narrate.py", Path.cwd() / "narrate.py"]
     for c in cands:
         if not c:

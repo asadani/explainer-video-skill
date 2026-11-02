@@ -19,7 +19,7 @@ files with Kokoro (CPU or CUDA) and handles acronyms, pauses and chunk caching.
 
 ```bash
 python scripts/evideo.py audio spec.json --tts narrate-your-writing \
-    --narrate-path ../narrate-your-writing/narrate.py --voice "bm_george+bm_fable" --speed 0.9
+    --narrate-path ../../tools/narrate-your-writing/narrate.py --voice "bm_george+bm_fable" --speed 0.9
 ```
 
 `--tts kokoro` and `--tts nyw` are aliases. If narrate-your-writing lives in a different Python environment (for
